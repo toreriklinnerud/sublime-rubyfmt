@@ -1,0 +1,5 @@
+[
+  {
+    "caption": "Format Ruby code", "command": "format_code"
+  }
+]

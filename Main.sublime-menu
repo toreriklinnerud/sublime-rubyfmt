@@ -1,0 +1,9 @@
+[
+  {
+      "id": "tools",
+      "children":
+      [
+          { "command": "format_code", "caption": "Format Ruby"}
+      ]
+  }
+]
