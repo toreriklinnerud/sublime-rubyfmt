@@ -20,9 +20,10 @@ $ which {ruby,rubyfmt}
 
 ## Formatting code
 
-On MacOS: `cmd+;`
+On Windows/Linux: `Ctrl + ;`
+On MacOS: `Cmd + ;`
 
-With a file open, hit ```cmd + ;``` and your code will be formatted.
+With a file open, hit the Ctrl/Cmd (depending on your platform) and your code will be formatted.
 
 If your file contains syntax errors it won't be formatted. The syntax error will breiefly flash in the Sublime Text status bar at the bottom of the editor window.
 
