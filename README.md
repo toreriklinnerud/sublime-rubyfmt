@@ -10,7 +10,7 @@ Tools ->
      type: rubyfmt (enter)
 ```
 
-Ruby and rubyfmt must already be installed and in your path:
+`ruby` and `rubyfmt` must already be installed and in your path:
 
 ```shell
 $ which {ruby,rubyfmt}
