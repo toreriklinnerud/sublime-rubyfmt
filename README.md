@@ -15,7 +15,7 @@ Ruby and rubyfmt must already be installed and in your path:
 ```shell
 $ which {ruby,rubyfmt}
 /Users/tel/.rbenv/shims/ruby
-/Users/tel/bin//rubyfmt
+/Users/tel/bin/rubyfmt
 ```
 
 ## Formatting code
