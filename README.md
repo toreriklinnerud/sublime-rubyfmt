@@ -25,7 +25,7 @@ $ which {ruby,rubyfmt}
 
 ## Formatting code
 
-On Windows/Linux: `Ctrl + ;`
+On Windows/Linux: `Alt + ;`
 On MacOS: `Cmd + ;`
 
 With a file open and syntax set to Ruby or Ruby on Rails, hit the above combination to apply auto format.

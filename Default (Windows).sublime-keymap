@@ -1,6 +1,6 @@
 [
     {
-        "keys": ["ctrl+;"],
+        "keys": ["alt+;"],
         "command": "format_code"
     }
 ]
