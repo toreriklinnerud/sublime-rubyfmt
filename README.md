@@ -2,7 +2,8 @@
 [Sublime text](https://www.sublimetext.com) plugin to autoformat [Ruby](https://www.ruby-lang.org/en/) code with [Rubyfmt](https://github.com/samphippen/rubyfmt)
 
 ## Installation
-By Sublime package control (recommended):
+
+By [Sublime Package Control](https://packagecontrol.io) (once merged):
 ```
 Tools ->
    Command Palette ->
@@ -10,7 +11,11 @@ Tools ->
      type: rubyfmt (enter)
 ```
 
-`ruby` and `rubyfmt` must already be installed and in your path:
+Manual installation:
+
+Download Rubyfmt.sublime-package and place in `Installed Packaged` (not `Packages`). See [Sublime Packages docs](https://www.sublimetext.com/docs/3/packages.html)
+
+In either case, `ruby` and `rubyfmt` must already be installed and in your path:
 
 ```shell
 $ which {ruby,rubyfmt}
