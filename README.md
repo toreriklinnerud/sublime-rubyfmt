@@ -23,9 +23,15 @@ $ which {ruby,rubyfmt}
 On Windows/Linux: `Ctrl + ;`
 On MacOS: `Cmd + ;`
 
-With a file open, hit the Ctrl/Cmd (depending on your platform) and your code will be formatted.
+With a file open and syntax set to Ruby or Ruby on Rails, hit the above combination to apply auto format.
 
-If your file contains syntax errors it won't be formatted. The syntax error will breiefly flash in the Sublime Text status bar at the bottom of the editor window.
+If your file contains syntax errors it won't be formatted. The syntax error will briefly flash in the Sublime Text status bar at the bottom of the editor window.
+
+## Format on Save / Other settings
+
+Format on save is disabled by default but can be enabled from `Sublime Text -> Preferences -> Package Settings -> Rubyfmt -> Settings - User` and adding `{"format_on_save: true"}`.
+
+See other settings available under `Settings - Default`.
 
 ## Troubleshooting
 

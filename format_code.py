@@ -5,6 +5,10 @@ import os.path
 import subprocess
 
 class FormatCodeCommand(sublime_plugin.TextCommand):
+    def __init__(self, view):
+        self.settings = sublime.load_settings("Rubyfmt.sublime-settings")
+        self.view = view
+
     def run(self, edit):
         syntax = self.view.settings().get('syntax').lower()
         if 'ruby' in syntax:
@@ -14,21 +18,21 @@ class FormatCodeCommand(sublime_plugin.TextCommand):
         region = sublime.Region(0, self.view.size())
         unformatted_bytes = self.view.substr(region)
 
-        formatted_bytes = FormatCodeCommand.format_bytes(unformatted_bytes)
+        formatted_bytes = self.format_bytes(unformatted_bytes)
 
         if formatted_bytes:
             if unformatted_bytes != formatted_bytes:
                 self.view.replace(edit, region, formatted_bytes)
         else:
-            syntax_error = FormatCodeCommand.check_syntax(unformatted_bytes)
+            syntax_error = self.check_syntax(unformatted_bytes)
             if(syntax_error):
                 window = self.view.window()
                 window.set_status_bar_visible(True)
                 window.status_message(syntax_error)
 
-    @staticmethod
-    def check_syntax(bytes):
-        command = ["ruby", "-c"]
+    def check_syntax(self, bytes):
+        ruby_executable = self.settings.get("ruby_executable", "ruby")
+        command = [ruby_executable, "-c"]
 
         formatter = subprocess.Popen(command,
           stdin=subprocess.PIPE,
@@ -39,9 +43,9 @@ class FormatCodeCommand(sublime_plugin.TextCommand):
         if formatter.returncode != 0:
             return stderr.decode()
 
-    @staticmethod
-    def format_bytes(bytes):
-        command = ["rubyfmt"]
+    def format_bytes(self, bytes):
+        rubyfmt_executable = self.settings.get("rubyfmt_executable", "rubyfmt")
+        command = [rubyfmt_executable]
 
         formatter = subprocess.Popen(command,
           stdout=subprocess.PIPE,
@@ -53,9 +57,14 @@ class FormatCodeCommand(sublime_plugin.TextCommand):
         if formatter.returncode == 0:
             return formatted.decode()
         else:
-            syntax_error = FormatCodeCommand.check_syntax(bytes)
+            syntax_error = self.check_syntax(bytes)
             if not syntax_error:
                 print("Rubyfmt failed:")
                 print(stderr.decode())
 
 
+class FormatOnSave(sublime_plugin.EventListener):
+    def on_pre_save(self, view):
+        settings = sublime.load_settings("Rubyfmt.sublime-settings")
+        if settings.get("format_on_save", False):
+            view.run_command("format_code")
