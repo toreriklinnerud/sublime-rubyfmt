@@ -13,7 +13,7 @@ Tools ->
 
 Manual installation:
 
-Download Rubyfmt.sublime-package and place in `Installed Packaged` (not `Packages`). See [Sublime Packages docs](https://www.sublimetext.com/docs/3/packages.html)
+Download [Rubyfmt.sublime-package](https://github.com/toreriklinnerud/sublime-rubyfmt/releases/download/v0.1/Rubyfmt.sublime-package) and place in `Installed Packaged` (not `Packages`). See [Sublime Packages docs](https://www.sublimetext.com/docs/3/packages.html)
 
 In either case, `ruby` and `rubyfmt` must already be installed and in your path:
 
