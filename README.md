@@ -3,7 +3,7 @@
 
 ## Installation
 
-By [Sublime Package Control](https://packagecontrol.io) (once merged):
+By [Sublime Package Control](https://packagecontrol.io):
 ```
 Tools ->
    Command Palette ->
