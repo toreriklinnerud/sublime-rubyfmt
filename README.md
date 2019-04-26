@@ -1,9 +1,19 @@
 # sublime-rubyfmt
 [Sublime text](https://www.sublimetext.com) plugin to autoformat [Ruby](https://www.ruby-lang.org/en/) code with [Rubyfmt](https://github.com/samphippen/rubyfmt)
 
-## Installation
+## Dependencies
+`ruby` and `rubyfmt` must already be installed and in your path:
 
-By [Sublime Package Control](https://packagecontrol.io):
+```shell
+$ which {ruby,rubyfmt}
+/Users/tel/.rbenv/shims/ruby
+/Users/tel/bin/rubyfmt
+```
+
+
+## Plugin installation
+
+Through [Sublime Package Control](https://packagecontrol.io):
 ```
 Tools ->
    Command Palette ->
@@ -11,17 +21,9 @@ Tools ->
      type: rubyfmt (enter)
 ```
 
-Manual installation:
+or manually:
 
 Download [Rubyfmt.sublime-package](https://github.com/toreriklinnerud/sublime-rubyfmt/releases/download/v0.1.0/Rubyfmt.sublime-package) and place in `Installed Packages` (not `Packages`). See [Sublime Packages docs](https://www.sublimetext.com/docs/3/packages.html).
-
-In either case, `ruby` and `rubyfmt` must already be installed and in your path:
-
-```shell
-$ which {ruby,rubyfmt}
-/Users/tel/.rbenv/shims/ruby
-/Users/tel/bin/rubyfmt
-```
 
 ## Formatting code
 
