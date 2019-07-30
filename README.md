@@ -2,13 +2,7 @@
 [Sublime text](https://www.sublimetext.com) plugin to autoformat [Ruby](https://www.ruby-lang.org/en/) code with [Rubyfmt](https://github.com/samphippen/rubyfmt)
 
 ## Dependencies
-`ruby` and `rubyfmt` must already be installed and in your path:
-
-```shell
-$ which {ruby,rubyfmt}
-/Users/tel/.rbenv/shims/ruby
-/Users/tel/bin/rubyfmt
-```
+`ruby` is assumed to be in path and `rubyfmt.rb` is assumed to be in `~/bin/rubyfmt.rb` but this can be overriden in the package settings.
 
 
 ## Plugin installation
@@ -27,7 +21,7 @@ Download [Rubyfmt.sublime-package](https://github.com/toreriklinnerud/sublime-ru
 
 ## Formatting code
 
-On Windows/Linux: `Alt + ;`  
+On Windows/Linux: `Alt + ;`
 On MacOS: `Cmd + ;`
 
 With a file open and syntax set to Ruby or Ruby on Rails, hit the above combination to apply auto format.
