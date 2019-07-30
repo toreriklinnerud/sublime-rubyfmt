@@ -44,8 +44,10 @@ class FormatCodeCommand(sublime_plugin.TextCommand):
             return stderr.decode()
 
     def format_bytes(self, bytes):
-        rubyfmt_executable = self.settings.get("rubyfmt_executable", "rubyfmt")
-        command = [rubyfmt_executable]
+        ruby_executable = self.settings.get("ruby_executable", "ruby")
+        rubyfmt_location = self.settings.get("rubyfmt_location", "~/bin/rubyfmt.rb")
+        command = [ruby_executable]
+        command.extend(["--disable=gems", os.path.expanduser(rubyfmt_location)])
 
         formatter = subprocess.Popen(command,
           stdout=subprocess.PIPE,
