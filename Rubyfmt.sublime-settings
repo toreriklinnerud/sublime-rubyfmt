@@ -1,5 +1,5 @@
 {
   "ruby_executable": "ruby",
-  "rubyfmt_location": "~/bin/rubyfmt.rb",
+  "rubyfmt_executable": "rubyfmt",
   "format_on_save": true,
 }
