@@ -2,7 +2,7 @@
 [Sublime text](https://www.sublimetext.com) plugin to autoformat [Ruby](https://www.ruby-lang.org/en/) code with [Rubyfmt](https://github.com/samphippen/rubyfmt). If the file contains syntax errors it won't be formatted and the error is displayed in the Sublime status bar at the bottom of the editor window.
 
 ## Dependencies
-The correct `ruby` and `rubyfmt` executables are assumed to be in path but this can be overriden with absolute paths in the package settings (`"ruby_executable"` and `"rubyfmt_executable"` respectively).
+A `ruby` and `rubyfmt` executable is assumed to be in path but this can be overriden with absolute paths in the package settings (`"ruby_executable"` and `"rubyfmt_executable"` respectively).
 
 ## Plugin installation
 
@@ -29,9 +29,17 @@ If your file contains syntax errors it won't be formatted. The syntax error will
 
 ## Format on Save / Other settings
 
-Format on save is disabled by default but can be enabled from `Sublime Text -> Preferences -> Package Settings -> Rubyfmt -> Settings - User` and adding `{"format_on_save: true"}`.
+Format on save is enabled by default but can be disabled from `Sublime Text -> Preferences -> Package Settings -> Rubyfmt -> Settings - User` and adding `{"format_on_save: false"}`.
 
-See other settings available under `Settings - Default`.
+All settings with default values:
+
+```json
+{
+  "ruby_executable": "ruby",
+  "rubyfmt_executable": "rubyfmt",
+  "format_on_save": true,
+}
+```
 
 ## Troubleshooting
 
