@@ -6,17 +6,7 @@ A `ruby` and `rubyfmt` executable is assumed to be in path but this can be overr
 
 ## Plugin installation
 
-Through [Sublime Package Control](https://packagecontrol.io):
-```
-Tools ->
-   Command Palette ->
-     type: Install Package (enter)
-     type: rubyfmt (enter)
-```
-
-or manually:
-
-Download [Rubyfmt.sublime-package](https://github.com/toreriklinnerud/sublime-rubyfmt/releases/download/v0.1.0/Rubyfmt.sublime-package) and place in `Installed Packages` (not `Packages`). See [Sublime Packages docs](https://www.sublimetext.com/docs/3/packages.html).
+Through [Sublime Package Control](https://packagecontrol.io): Install Package -> Rubyfmt
 
 ## Formatting code
 
