@@ -19,7 +19,8 @@ If your file contains syntax errors it won't be formatted. The syntax error will
 
 ## Format on Save / Other settings
 
-Format on save is enabled by default but can be disabled from `Sublime Text -> Preferences -> Package Settings -> Rubyfmt -> Settings - User` and adding `{"format_on_save: false"}`.
+  * Format on save is enabled by default but can be disabled from `Sublime Text -> Preferences -> Package Settings -> Rubyfmt -> Settings - User` and adding `{"format_on_save: false"}`.
+  * `rubyfmt_flags` can be added to use `--header-opt-in` or `--header-opt-out` behaviors.
 
 All settings with default values:
 
@@ -27,6 +28,7 @@ All settings with default values:
 {
   "ruby_executable": "ruby",
   "rubyfmt_executable": "rubyfmt",
+  "rubyfmt_flags": "",
   "format_on_save": true,
 }
 ```

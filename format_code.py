@@ -46,7 +46,13 @@ class FormatCodeCommand(sublime_plugin.TextCommand):
     def format_bytes(self, bytes):
         ruby_executable = self.settings.get("ruby_executable", "ruby")
         rubyfmt_executable = self.settings.get("rubyfmt_executable", "rubyfmt")
-        command = [rubyfmt_executable]
+        rubyfmt_flags = self.settings.get("rubyfmt_flags", None)
+        
+        flags = []
+        if type(rubyfmt_flags) is str:
+            flags = rubyfmt_flags.split()
+
+        command = [rubyfmt_executable] + flags
 
         formatter = subprocess.Popen(command,
           stdout=subprocess.PIPE,
