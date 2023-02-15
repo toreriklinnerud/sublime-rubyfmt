@@ -1,5 +1,6 @@
 {
   "ruby_executable": "ruby",
   "rubyfmt_executable": "rubyfmt",
+  "rubyfmt_flags": "",
   "format_on_save": true,
 }
